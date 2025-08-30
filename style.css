@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-color: black;
+    --sec-color: grey;
+    --accent-color: orange;
+    --text-color: #fff;
+}
+img{
+    display: flex;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.navigation{
+    box-sizing: border-box;
+    padding: 1rem 0.5rem;
+    display: flex;
+    background-color: var(--sec-color);
+}
+.navigation .head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+.navigation .head h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.navigation .head i{
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.navigation .head i:hover{
+    transform: scale(1.2);
+}
+.navigation .links{
+    background-color: var(--sec-color);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    top: 60px;
+    left: 0;
+    transform: translateY(-100%);
+    box-sizing: border-box;
+    padding: 0.8rem 0;
+    z-index: -1;
+    gap: 8px;
+    transition: 0.5s ease-out;
+}
+.navigation .links a{
+    color: var(--text-color);
+    transition: 0.2s ease;
+}
+.navigation .links a:hover{
+    color: var(--accent-color);
+}
+.navigation .links.show{
+    transform: translateY(0);
+}
+.navigation .links .hide{
+    transform: translateY(-100%);
+}
