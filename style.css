@@ -86,20 +86,23 @@ main{
     box-sizing: border-box;
     padding: 0.8rem;
     background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 main .hero{
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
-    box-sizing: border-box;
-    padding: 1.2rem;
     background-color: var(--sec-color);
     border-radius: 2rem;
+    overflow: hidden;
 }
 .hero .text-section{
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 2rem;
     color: var(--text-color);
 }
 
@@ -170,7 +173,7 @@ main .hero{
   font-weight: 500;
 }
 .buttons{
-    margin-top: 0.7rem;
+    margin-top: 1.2rem;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -200,18 +203,19 @@ main .hero{
 .hero .middle-section{
     display: none;
 }
-.picture-section{
+.hero .picture-section{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    padding: 2rem;
 
 }
 .picture-section img{
     border-radius: 100%;
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
     overflow: hidden;
     border: 6px solid var(--accent-color);
     object-fit: cover;
@@ -220,6 +224,9 @@ main .hero{
 
 
 @media(width > 768px){
+    .navigation{
+        z-index: 9999;
+    }
     .navigation .head{
         width: 60%;
     }
@@ -258,4 +265,131 @@ main .hero{
     .navigation .links a:hover::before{
         width: 100%;
     }
+    main .hero {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        max-width: 1400px;
+        padding: 0;
+    }
+
+    main .hero .text-section {
+        background-color: var(--sec-color);
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 2rem;
+    }
+
+    main .hero .middle-section {
+        display: block;
+        width: 21%;
+        background-color: var(--accent-color); /* SAME as text-section */
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+
+    main .hero .picture-section {
+        width: 40%;
+        background-color: var(--accent-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 1.5rem;
+    }
+
+    main .hero .picture-section img {
+        width: 80%;          /* consistent scaling */
+        max-width: 700px;    /* never gets too big */
+        height: auto;
+        border-radius: 50%;
+        border: 6px solid var(--sec-color); /* adjust border */
+    }
+    main .hero .text-section .toptext{
+        display: flex;
+        font-size: 3rem;
+        justify-content: start;
+        align-items: center;
+    }
+    .maintext{
+        font-size: 3.8rem;
+        height: fit-content;
+    }
+    .bottomtext{
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding-bottom: 1rem;
+
+    }
+    .connect .tagline{
+        padding-top: 2rem;
+        display: flex;
+        align-items: center;
+    }
+    .connect .buttons{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
 }
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .navigation .head{
+        width: 40%;
+    }
+    .navigation .links{
+        width: 60%;
+    }
+    main .hero {
+        flex-direction: row;   
+        height: auto;
+        max-width: 1200px;
+        padding: 0;
+    }
+
+    main .hero .text-section {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        background-color: var(--sec-color);
+    }
+
+    main .hero .middle-section {
+        display: none;  
+    }
+
+    main .hero .picture-section {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background-color: var(--accent-color);
+        clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    main .hero .picture-section img {
+        width: 75%;      
+        max-width: 450px; 
+        height: auto;
+        border-radius: 50%;
+        border: 6px solid var(--sec-color);
+        margin-left: auto;
+    }
+
+    .maintext {
+        font-size: 2.6rem;
+    }
+    .typed-text{
+        font-size: 2.5rem;
+    }
+    .bottomtext {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+    }
