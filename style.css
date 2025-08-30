@@ -226,13 +226,9 @@ main .hero{
     aspect-ratio: 1/1;
 }
 
-
-@media(width > 768px){
+@media (min-width: 768px){
     .navigation{
         z-index: 9999;
-    }
-    .navigation .head{
-        width: 60%;
     }
     .head i{
         display: none;
@@ -244,7 +240,6 @@ main .hero{
         position: static;
         justify-content: space-evenly;
         z-index: 10;
-        width: 40%;
         background-color: transparent !important;
     }
     .navigation .links a{
@@ -270,62 +265,54 @@ main .hero{
         width: 100%;
     }
     main .hero {
-        display: flex;
-        flex-direction: row;
+        flex-direction: row;   
         height: auto;
-        max-width: 1400px;
+        max-width: 1200px;
         padding: 0;
     }
-
     main .hero .text-section {
-        background-color: var(--sec-color);
         width: 40%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         padding: 2rem;
+        background-color: var(--sec-color);
     }
-
     main .hero .picture-section {
         width: 60%;
-        background-color: var(--accent-color);
         display: flex;
         justify-content: end;
         align-items: center;
-        box-sizing: border-box;
-        padding: 1.5rem;
+        padding: 2rem;
+        background-color: var(--accent-color);
         clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
     }
-
     main .hero .picture-section .supporting-div{
+        width: 65%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 65%;
     }
-
     main .hero .picture-section img {
-        width: 80%;          /* consistent scaling */
-        max-width: 500px;    /* never gets too big */
+        width: 80%;      
+        max-width: 500px; 
         height: auto;
         border-radius: 50%;
-        border: 6px solid var(--sec-color); /* adjust border */
+        border: 6px solid var(--sec-color);
     }
-    main .hero .text-section .toptext{
+    .toptext{
         display: flex;
         font-size: 3rem;
         justify-content: start;
         align-items: center;
     }
-    .maintext{
-        font-size: 3.8rem;
+    .maintext {
         height: fit-content;
     }
-    .bottomtext{
-        font-size: 1.2rem;
-        line-height: 2rem;
+    .bottomtext {
+        font-size: 1rem;
+        line-height: 1.6rem;
         padding-bottom: 1rem;
-
     }
     .connect .tagline{
         padding-top: 2rem;
@@ -338,56 +325,20 @@ main .hero{
         align-items: center;
         margin-top: 1rem;
     }
-
 }
 
+
 @media (min-width: 768px) and (max-width: 1090px) {
+
     .navigation .head{
         width: 40%;
     }
     .navigation .links{
         width: 60%;
     }
-    main .hero {
-        flex-direction: row;   
-        height: auto;
-        max-width: 1200px;
-        padding: 0;
+    .toptext{
+        font-size: 3rem;
     }
-
-    main .hero .text-section {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        background-color: var(--sec-color);
-    }
-
-    main .hero .picture-section {
-        width: 60%;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        padding: 2rem;
-        background-color: var(--accent-color);
-        clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
-    }
-
-    main .hero .picture-section .supporting-div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    main .hero .picture-section img {
-        width: 80%;      
-        max-width: 500px; 
-        height: auto;
-        border-radius: 50%;
-        border: 6px solid var(--sec-color);
-    }
-
     .maintext {
         font-size: 2.6rem;
     }
@@ -397,5 +348,39 @@ main .hero{
     .bottomtext {
         font-size: 1rem;
         line-height: 1.6rem;
+    }
+}
+
+@media (min-width:768px) and (max-width: 785px){
+    .typed-text{
+        font-size: 2.4rem;
+    }
+}
+
+@media(min-width: 1091px){
+    .navigation .head{
+        width: 60%;
+    }
+    .navigation .links{
+        width: 40%;
+    }
+    main .hero {
+        max-width: 1400px;
+    }
+
+    main .hero .text-section {
+        justify-content: space-evenly;
+    }
+
+    main .hero .picture-section img {  
+        max-width: 600px;
+    }
+    .maintext{
+        font-size: 3.8rem;
+    }
+    .bottomtext{
+        font-size: 1.2rem;
+        line-height: 2rem;
+
     }
 }
