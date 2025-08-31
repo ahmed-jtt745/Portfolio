@@ -59,3 +59,18 @@ function typeEffect() {
 document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 });
+
+//Adding functionality to the tabs
+
+function tabBtnSwitch(){
+  let button = this;
+  console.log(button.value);
+}
+
+let tabBtns = document.querySelectorAll('.tabButton');
+console.log(tabBtns);
+for(let i = 0; i < 3; i++){
+  if(i != 0)
+    document.querySelector(`.${tabBtns[i].value}`).classList.add('dismiss');
+  tabBtns[i].addEventListener('click', tabBtnSwitch);
+}

@@ -393,9 +393,6 @@ svg{
 .project-section-tabs button:hover::before{
     width: 100%;
 }
-.project-section-cards{
-    position: relative;
-}
 
 .teaching, .development, .other{
     box-sizing: border-box;
@@ -405,9 +402,11 @@ svg{
     place-items: center;
     justify-content: center;
     gap: 2rem;
+    transition: 0.2s ease;
 }
 .dismiss{
     display: none;
+    opacity: 0;
 }
 .project-section-card{
     box-sizing: border-box;
