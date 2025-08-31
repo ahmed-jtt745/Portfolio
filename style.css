@@ -266,6 +266,7 @@ main .hero{
     gap: 2rem;
 }
 .card-section-cards .card{
+    margin: auto;
     box-sizing: border-box;
     padding: 2rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -357,44 +358,8 @@ svg{
     font-weight: 600;
     margin-bottom: 1.2rem;
 }
-.project-section-tabs{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-}
-.project-section-tabs button{
-    position: relative;
-    padding: 0.5rem 0;
-    width: fit-content;
-    border: 2px solid transparent;
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: 1rem;
-    color: var(--text-color);
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: all 0.2s ease-out 0s;
-}
-.project-section-tabs button::before{
-    content: '';
-    height: 100%;
-    position: absolute;
-    width: 0;
-    top: 0;
-    border-bottom: 2px solid var(--accent-color);
-    transition: 0.3s ease;
-}
-.project-section-tabs button.active::before{
-    width: 100%;
-}
-.project-section-tabs button:hover::before{
-    width: 100%;
-}
 
-.teaching, .development, .other{
+.project-section-cards{
     box-sizing: border-box;
     padding: 0.6rem;
     display: grid;
@@ -402,12 +367,9 @@ svg{
     place-items: center;
     justify-content: center;
     gap: 2rem;
-    transition: 0.2s ease;
+    animation: 0.2s Appear;
 }
-.dismiss{
-    display: none;
-    opacity: 0;
-}
+
 .project-section-card{
     box-sizing: border-box;
     padding: 2rem;
@@ -580,9 +542,6 @@ svg{
     }
     .card-section-text-main, .project-section-text-main{
         font-size: 2.8rem;
-    }
-    .project-section-tabs button{
-        font-size: 1.2rem;
     }
 
 
