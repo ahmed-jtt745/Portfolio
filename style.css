@@ -435,7 +435,8 @@ svg{
 
 .contact-section-l-r{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
 }
 .contact-section-left, .contact-section-right{
@@ -711,6 +712,17 @@ form button:hover{
     .contact-section-left, .contact-section-right{
         width: 50%;
     }
+    .contact-section-l-r{
+        flex-direction: row;
+    }
+    .contact-section-left h1{
+        font-size: 1.7rem;
+    }
+    .contact-section-left p{
+        font-size: 1.2rem;
+    }
+
+
     form .first-row{
         flex-direction: row;
         gap: 16px;
