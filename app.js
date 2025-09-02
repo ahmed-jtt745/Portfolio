@@ -59,3 +59,29 @@ function typeEffect() {
 document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 });
+
+//Form sending data to my whatsapp
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let fname = document.getElementById("Fname").value;
+    let lname = document.getElementById("Lname").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    
+    let phoneNumber = "923056572669"; 
+
+    
+    let whatsappMessage = "Thanks for contacting %0a%0a"
+      + "*Name:* " + fname + " " + lname + "%0a"
+      + "*Email:* " + email + "%0a"
+      + "*Subject:* " + subject + "%0a"
+      + "*Message:* " + message;
+
+    
+    let whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
+
+    
+    window.open(whatsappURL, "_blank");
+  });
