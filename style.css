@@ -23,6 +23,9 @@ a{
 section{
     scroll-margin-top: calc(80px + 1rem);
 }
+strong{
+    color: var(--accent-color);
+}
 .navigation{
     position: sticky;
     top: 0;
@@ -334,7 +337,7 @@ svg{
     transform: translateY(-1rem);
 }
 
-.project-section, .contact-section{
+.project-section, .contact-section, .about-section{
     margin-top: 4rem;
     width: 100%;
     box-sizing: border-box;
@@ -342,21 +345,21 @@ svg{
     border-radius: 2rem;
     padding: 1rem;
 }
-.project-section-text, .contact-section-text{
+.project-section-text, .contact-section-text, .about-section-text{
     padding: 0.6rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.project-section-text-upper, .contact-section-text-upper{
+.project-section-text-upper, .contact-section-text-upper, .about-section-text-upper{
     font-size: 0.8rem;
     color: var(--accent-color);
     font-weight: 500;
     letter-spacing: 2px;
     margin-bottom: 1rem;
 }
-.project-section-text-main, .contact-section-text-main{
+.project-section-text-main, .contact-section-text-main, .about-section-text-main{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -437,13 +440,13 @@ svg{
 }
 
 
-.contact-section-l-r{
+.contact-section-l-r, .about-section-l-r{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
 }
-.contact-section-left, .contact-section-right{
+.contact-section-left, .contact-section-right, .about-section-left, .about-section-right{
     box-sizing: border-box;
     padding: 1.5rem;
     width: 100%;
@@ -615,6 +618,30 @@ form button:hover{
     animation-timeline: view();
     animation-range: entry 20% cover 50%;
 }
+
+
+.about-section .about-section-l-r .about-section-right, .about-section-left{
+    box-shadow: none;
+}
+.about-section-left{
+    justify-content: start;
+    align-items: start;
+}
+.about-section-left p, ul{
+    list-style: inside;
+    color: var(--text-color);
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.about-section-left h3{
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+.about-section-left .about-intro, .about-detail{
+    margin-bottom: 1rem;
+}
+
 @keyframes fadeUp{
     from{
         opacity: 0;
@@ -756,26 +783,24 @@ form button:hover{
         align-items: center;
         margin-top: 1rem;
     }
-    .card-section, .project-section, .contact-section{
+    .card-section, .project-section, .contact-section, .about-section{
         max-width: 1200px;
     }
     .card-section-text{
         align-items: start;
         padding-left: 2rem;
     }
-    .card-section-text-upper{
-        font-size: 1.6rem;
-    }
-    .project-section-text-upper, .contact-section-text-upper{
+
+    .project-section-text-upper, .card-section-text-upper, .contact-section-text-upper, .about-section-text-upper{
         font-size: 1.2rem;
     }
-    .card-section-text-main, .project-section-text-main, .contact-section-text-main{
+    .card-section-text-main, .project-section-text-main, .contact-section-text-main, .about-section-text-main{
         font-size: 2.8rem;
     }
-    .contact-section-left, .contact-section-right{
+    .contact-section-left, .contact-section-right, .about-section-left, .about-section-right{
         width: 50%;
     }
-    .contact-section-l-r{
+    .contact-section-l-r, .about-section-l-r{
         flex-direction: row;
     }
     .contact-section-left h1{
@@ -855,16 +880,22 @@ form button:hover{
         line-height: 2rem;
 
     }
-    .card-section, .project-section, .contact-section{
+    .card-section, .project-section, .contact-section, .about-section{
         max-width: 1400px;
     }
-    .card-section-text-upper{
-        font-size: 1.9rem;
-    }
-    .project-section-text-upper, .contact-section-text-upper{
+    .project-section-text-upper, .card-section-text-upper, .contact-section-text-upper, .about-section-text-upper{
         font-size: 1.4rem;
     }
-    .card-section-text-main, .project-section-text-main, .contact-section-text-main{
+    .card-section-text-main, .project-section-text-main, .contact-section-text-main, .about-section-text-main{
         font-size: 3.1rem;
+    }
+}
+
+@media(width < 958px){
+    .about-section-l-r{
+        flex-direction: column;
+    }
+    .about-section-left, .about-section-right{
+        width: 100%;
     }
 }
